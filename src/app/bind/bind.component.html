@@ -1,0 +1,49 @@
+<p>
+  bind works!
+</p>
+<button (click)="doClick($event)">点我</button>
+<hr>
+<img [src]="imgUrl">
+<hr>
+<input value="Tom" (input)="doOnInput($event)">
+<input value="{{inputVal}}" (input)="doOnInput($event)">
+<hr>
+<table>
+  <tbody>
+  <tr>
+    <td>用户名</td>
+    <td>性别</td>
+    <td>年龄</td>
+  </tr>
+  <tr>
+    <td [attr.colspan]="size">无数据</td>
+  </tr>
+  </tbody>
+</table>
+<hr>
+<div class="a b c">
+  慕课网
+</div>
+<div [class]="divClass">
+  慕课网
+</div>
+<div class="a b" [class.c]="isBig">
+  慕课网
+</div>
+<div [ngClass]="divClazz">
+  慕课网
+</div>
+<div [style.color]="isDev?'red':'green'">style color</div>
+<div [style.font-size.em]="isDev?3:2">style color</div>
+<div [ngStyle]="divStyle">ngStyle</div>
+<hr>
+<input [value]="name" (input)="doOnChange($event)">{{name}}<br>
+<input [(ngModel)]="age">{{age}}
+<hr>
+<p>响应式编程 rxjs</p>
+<input [formControl]="searchInput">
+<hr>
+<p>管道示例</p>
+<p>我的生日是{{birthday | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+<p>圆周率是{{pi | number:'3.1-4'}}</p>
+<p>自定义管道{{size | multiple:7}}</p>
